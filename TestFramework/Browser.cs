@@ -11,6 +11,7 @@ namespace TestFramework
     {
         const string path = @"C:\Selenium\";
         static IWebDriver webDriver = new FirefoxDriver(path);
+        String Url = "https://www.mercadolibre.com.ar/";
 
         private IWebDriver driver;
         private WebDriverWait wait;
@@ -28,6 +29,11 @@ namespace TestFramework
             webDriver.Manage().Window.Maximize();
         }
 
+        public String GetActualUrl()
+        {
+            return driver.Url;
+        }
+
         public static IWebDriver GetWebDriver()
         {
             return webDriver;
@@ -43,9 +49,9 @@ namespace TestFramework
             webDriver.Manage().Cookies.DeleteAllCookies();
         }
 
-        public void GoTo(string url)
+        public void GoTo()
         {
-            webDriver.Url = url;
+            webDriver.Navigate().GoToUrl(Url);
         }
 
         public static void Close()
@@ -65,5 +71,6 @@ namespace TestFramework
             wait.Until(ExpectedConditions.ElementToBeClickable(element));
             element.Click();
         }
+
     }
 }

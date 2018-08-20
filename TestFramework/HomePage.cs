@@ -30,15 +30,16 @@ namespace TestFramework
             return new LoginPage(driver);
         }
 
-        public void SetSearch(String search)
+        public ResultsPage SetSearch(String search, IWebDriver driver)
         {
             _searchBox.SendKeys(search);
             _searchButton.Click();
+            return new ResultsPage(driver);
         }
 
         public bool IsAt()
         {
-            return Browser.GetTitle().Equals(PageTitle);
+            return GetTitle().Equals(PageTitle);
         }
     }
 }

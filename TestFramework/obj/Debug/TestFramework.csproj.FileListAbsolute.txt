@@ -19,3 +19,17 @@ C:\Users\matia\source\repos\TestFramework\TestFramework\obj\Debug\TestFramework.
 C:\Users\matia\source\repos\TestFramework\TestFramework\obj\Debug\TestFramework.dll
 C:\Users\matia\source\repos\TestFramework\TestFramework\obj\Debug\TestFramework.pdb
 C:\Users\matia\source\repos\TestFramework\TestFramework\obj\Debug\TestFramework.csprojResolveAssemblyReference.cache
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\bin\Debug\TestFramework.dll
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\bin\Debug\TestFramework.pdb
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\bin\Debug\WebDriver.dll
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\bin\Debug\WebDriver.Support.dll
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\bin\Debug\WebDriver.xml
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\bin\Debug\WebDriver.Support.xml
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\obj\Debug\TestFramework.csproj.CoreCompileInputs.cache
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\obj\Debug\TestFramework.csproj.CopyComplete
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\obj\Debug\TestFramework.dll
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\obj\Debug\TestFramework.pdb
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\bin\Debug\System.Security.Cryptography.X509Certificates.dll

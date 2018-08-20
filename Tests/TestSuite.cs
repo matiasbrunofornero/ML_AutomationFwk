@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using System;
 using TestFramework;
 
 namespace Tests
@@ -8,41 +7,42 @@ namespace Tests
     [TestClass]
     public class UnitTest1
     {
-        String Url = "https://www.mercadolibre.com.ar/";
         IWebDriver webDriver = Browser.GetWebDriver();
 
         [TestInitialize]
         public void GoToHomePage()
         {
-            Browser.SetUp();
-            Browser.CleanData();
-
             HomePage homePage = new HomePage(webDriver);
-            homePage.GoTo(Url);
 
-            Assert.IsTrue(homePage.IsAt());
+            Browser.CleanData();
+            Browser.SetUp();
+
+            homePage.GoTo();
+
+            Assert.AreEqual("https://www.mercadolibre.com.ar/", homePage.GetActualUrl());
         }
 
         [TestMethod]
         public void Search()
         {
             HomePage homePage = new HomePage(webDriver);
+            ResultsPage resultsPage = new ResultsPage(webDriver);
+            ResultSummary summaryPage = new ResultSummary(webDriver);
 
-            homePage.SetSearch("iPhone 8 Plus 64 GB");
+            resultsPage = homePage.SetSearch("iPhone 8 Plus 64 GB", webDriver);
+            summaryPage = resultsPage.ClickResult(2, webDriver);
         }
 
         [TestMethod]
         public void Login()
         {
-            IWebDriver webDriver = Browser.GetWebDriver();
-
             HomePage homePage = new HomePage(webDriver);
-            homePage.ClickLogin(webDriver);
-
             LoginPage loginPage = new LoginPage(webDriver);
-            loginPage.SetUsername("matiasbrunofornero@gmail.com", webDriver);
-
             PasswordPage passwordPage = new PasswordPage(webDriver);
+
+            loginPage = homePage.ClickLogin(webDriver);
+            passwordPage = loginPage.SetUsername("matiasbrunofornero@gmail.com", webDriver);
+
             passwordPage.SetPassword("dni36616668");
             passwordPage.ClickAccept();
         }
