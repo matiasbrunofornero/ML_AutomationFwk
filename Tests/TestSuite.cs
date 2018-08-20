@@ -18,7 +18,6 @@ namespace Tests
             Browser.SetUp();
 
             homePage.GoTo();
-
             Assert.AreEqual("https://www.mercadolibre.com.ar/", homePage.GetActualUrl());
         }
 
@@ -34,6 +33,32 @@ namespace Tests
         }
 
         [TestMethod]
+        public void Register()
+        {
+            HomePage homePage = new HomePage(webDriver);
+            RegisterPage registerPage = new RegisterPage(webDriver);
+
+            registerPage = homePage.ClickRegister(webDriver);
+
+            registerPage.ClickCreate();
+            Assert.IsTrue(registerPage.IsNameInvalid());
+            registerPage.SetName("Automated");
+
+            registerPage.ClickCreate();
+            Assert.IsTrue(registerPage.IsLastnameInvalid());
+            registerPage.SetLastname("Testing");
+
+            registerPage.ClickCreate();
+            Assert.IsTrue(registerPage.IsEmailInvalid());
+            registerPage.SetEmail("administrador@administrador.com");
+
+            registerPage.ClickCreate();
+            Assert.IsTrue(registerPage.IsNoPasswordPopupDisplayed());
+            registerPage.SetPassword("12345678");
+
+        }
+
+        [TestMethod]
         public void Login()
         {
             HomePage homePage = new HomePage(webDriver);
@@ -41,10 +66,10 @@ namespace Tests
             PasswordPage passwordPage = new PasswordPage(webDriver);
 
             loginPage = homePage.ClickLogin(webDriver);
-            passwordPage = loginPage.SetUsername("matiasbrunofornero@gmail.com", webDriver);
+            passwordPage = loginPage.SetUsername("AUTOMATEDTESTING", webDriver);
 
-            passwordPage.SetPassword("dni36616668");
-            passwordPage.ClickAccept();
+            passwordPage.SetPassword("asdasd");
+            homePage = passwordPage.ClickAccept(webDriver);
         }
 
         [TestCleanup]

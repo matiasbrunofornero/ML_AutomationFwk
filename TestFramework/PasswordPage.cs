@@ -6,7 +6,7 @@ namespace TestFramework
 {
     public class PasswordPage : Browser
     {
-        [FindsBy(How = How.CssSelector, Using = "input.andes-form-control__field")]
+        [FindsBy(How = How.CssSelector, Using = ".auth-textinput #password")]
         private IWebElement _passwordInput;
 
         [FindsBy(How = How.Id, Using = "action-complete")]
@@ -16,12 +16,14 @@ namespace TestFramework
 
         public void SetPassword(String pass)
         {
-            _passwordInput.SendKeys(pass);
+            CleanSendKeys(_passwordInput, pass);
         }
 
-        public void ClickAccept()
+        public HomePage ClickAccept(IWebDriver driver)
         {
             _accept.Click();
+            return new HomePage(driver);
+
         }
     }
 }

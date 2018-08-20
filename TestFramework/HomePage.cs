@@ -30,6 +30,12 @@ namespace TestFramework
             return new LoginPage(driver);
         }
 
+        public RegisterPage ClickRegister(IWebDriver driver)
+        {
+            _registerButton.Click();
+            return new RegisterPage(driver);
+        }
+
         public ResultsPage SetSearch(String search, IWebDriver driver)
         {
             _searchBox.SendKeys(search);
