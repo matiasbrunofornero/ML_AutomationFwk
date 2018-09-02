@@ -34,3 +34,5 @@ C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\bin\Debug\
 C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\bin\Debug\System.Security.Cryptography.Primitives.dll
 C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\bin\Debug\System.Security.Cryptography.X509Certificates.dll
 C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\obj\Debug\TestFramework.csprojResolveAssemblyReference.cache
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\obj\Debug\TestFramework.Resources.UiText.resources
+C:\Users\matia\source\repos\TestFramework\Mercado-Libre\TestFramework\obj\Debug\TestFramework.csproj.GenerateResource.cache

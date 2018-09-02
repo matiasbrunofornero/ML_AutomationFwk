@@ -59,16 +59,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Browser.cs" />
-    <Compile Include="HomePage.cs" />
-    <Compile Include="LoginPage.cs" />
-    <Compile Include="PasswordPage.cs" />
+    <Compile Include="Pages\HomePage.cs" />
+    <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Pages\PasswordPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterPage.cs" />
-    <Compile Include="ResultsPage.cs" />
-    <Compile Include="ResultSummary.cs" />
+    <Compile Include="Pages\RegisterPage.cs" />
+    <Compile Include="Pages\ResultsPage.cs" />
+    <Compile Include="Pages\ResultSummary.cs" />
+    <Compile Include="Resources\UiText.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UiText.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Resources\TestData.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\UiText.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UiText.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
